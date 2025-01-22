@@ -1,0 +1,4 @@
+enum ThPrimaryButtonSize {
+  small,
+  large,
+}

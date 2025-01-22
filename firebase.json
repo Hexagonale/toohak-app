@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "site": "toohak-58bc4",
+    "public": "build/web",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

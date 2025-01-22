@@ -1,0 +1,43 @@
+# Recommended lints for Flutter apps, packages, and plugins.
+include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  language:
+    strict-casts: true
+    # strict-raw-types: true
+  errors:
+    # Treat missing required parameters as a warning (not a hint).
+    missing_required_param: warning
+    # Treat missing returns as a warning (not a hint).
+    missing_return: warning
+    # Allow having TODOs in the code.
+    todo: ignore
+  exclude:
+    - "lib/**/*.g.dart"
+    - "lib/**/config.example.dart"
+    - "lib/generated/*.dart"
+    - "lib/generated/**/*.dart"
+    - "**/*.mocks.dart"
+    - "ignored/*"
+
+linter:
+  rules:
+    # =========================
+    # Rules that we DON'T WANT.
+    # =========================
+    # Does not work when tests and mocks are placed in the /lib folder.
+    depend_on_referenced_packages: false
+
+    # ==============================
+    # Additional rules that we WANT.
+    # ==============================
+    always_declare_return_types: true
+    flutter_style_todos: true
+    prefer_final_fields: true
+    # prefer_final_locals: true
+    prefer_single_quotes: true
+    sort_constructors_first: true
+    sort_unnamed_constructors_first: true
+    unawaited_futures: true
+    avoid_dynamic_calls: true
+    directives_ordering: true
